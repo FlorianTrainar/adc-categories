@@ -1,1 +1,89 @@
 @import 'tailwindcss';
+
+:root {
+  background: #ffffff;
+}
+
+.page {
+  --primary: #0b3558;
+  --page-bg: #ffffff;
+  --panel-bg: #ffffff;
+  --text: #0b3558;
+  --choice-bg: #e7eff5;
+  --choice-text: #0b3558;
+  --choice-hover: #d6e4ee;
+  --selected-bg: #b9d0e1;
+  --selected-text: #0b3558;
+  --result-bg: #0b3558;
+  --result-text: #ffffff;
+  --reference-text: #0b3558;
+  --active-border: #3e7197;
+  --step-bg: #0b3558;
+  --step-border: #0b3558;
+  --border: #9aafbf;
+  min-height: 100vh;
+  color: var(--text);
+  background: var(--page-bg);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.page legend,
+.page h2 {
+  font-weight: 700;
+}
+
+.form-panel,
+.result-panel {
+  background: var(--panel-bg);
+  border-color: var(--border);
+}
+
+.step-number {
+  color: #ffffff;
+  background: var(--step-bg);
+  border-color: var(--step-border);
+}
+
+.choice {
+  color: var(--choice-text);
+  background: var(--choice-bg);
+  border-color: var(--border);
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.choice:hover {
+  background: var(--choice-hover);
+  border-color: var(--active-border);
+}
+
+.choice:has(input:checked) {
+  color: var(--selected-text);
+  background: var(--selected-bg);
+  border-color: var(--active-border);
+}
+
+.choice-input {
+  accent-color: var(--primary);
+}
+
+.theme-button {
+  color: #ffffff;
+  background: var(--primary);
+}
+
+.result-category {
+  color: var(--result-text);
+  background: var(--result-bg);
+}
+
+.theme-button:hover {
+  background: color-mix(in srgb, var(--primary), #000000 14%);
+}
+
+.result-help {
+  color: inherit;
+}
+
+.color-references {
+  color: var(--reference-text);
+}
